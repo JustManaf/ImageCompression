@@ -9,7 +9,7 @@
 // This shows the HTML page in "ui.html".
 figma.showUI(__html__);
 
-// Calls to "parent.postMessage" from within the HTML page will trigger this
+// Calls to "parent.postMessage" from within the HTML page will trigger thisı
 // callback. The callback will be passed the "pluginMessage" property of the
 // posted message.
 figma.ui.onmessage =  (msg: {type: string, count: number}) => {
