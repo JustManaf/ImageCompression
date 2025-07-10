@@ -19,7 +19,7 @@ figma.ui.onmessage =  (msg: {type: string, count: number}) => {
     // This plugin creates rectangles on the screen.
     const numberOfRectangles = msg.count;
 
-    const nodes: SceneNode[] = [];
+    const nodes: SceneNode[] = [];   
     for (let i = 0; i < numberOfRectangles; i++) {
       const rect = figma.createRectangle();
       rect.x = i * 150;
@@ -27,8 +27,8 @@ figma.ui.onmessage =  (msg: {type: string, count: number}) => {
       figma.currentPage.appendChild(rect);
       nodes.push(rect);
     }
-    figma.currentPage.selection = nodes;
-    figma.viewport.scrollAndZoomIntoView(nodes);
+    figma.currentPage.selection = nodes; 
+    figma.viewport.scrollAndZoomIntoView(nodes); 
   }
 
   // Make sure to close the plugin when you're done. Otherwise the plugin will
